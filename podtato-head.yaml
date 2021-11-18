@@ -38,25 +38,25 @@ spec:
     targetPort: 9000
     
 ---
-apiVersion: route.openshift.io/v1
-kind: Route
-metadata:
-  name: helloservice
-spec:
-  host: hello1.apps.comcast-1.na-1.rht-labs.com
-  port:
-    targetPort: http
-  tls:
-    termination: edge
-  to:
-    kind: Service
-    name: helloservice
-    weight: 100
-  wildcardPolicy: None
-status:
-  ingress:
-  - conditions:
-    host: hello1.apps.comcast-1.na-1.rht-labs.com
-    routerCanonicalHostname: apps.comcast-1.na-1.rht-labs.com
-    routerName: default
-    wildcardPolicy: None
+#apiVersion: route.openshift.io/v1
+#kind: Route
+#metadata:
+#  name: helloservice
+#spec:
+#  host: hello1.apps.comcast-1.na-1.rht-labs.com
+#  port:
+#    targetPort: http
+#  tls:
+#    termination: edge
+#  to:
+#    kind: Service
+#    name: helloservice
+#    weight: 100
+#  wildcardPolicy: None
+#status:
+#  ingress:
+#  - conditions:
+#    host: hello1.apps.comcast-1.na-1.rht-labs.com
+#    routerCanonicalHostname: apps.comcast-1.na-1.rht-labs.com
+#    routerName: default
+#    wildcardPolicy: None
