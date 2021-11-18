@@ -43,7 +43,7 @@ kind: Route
 metadata:
   name: helloservice
 spec:
-  host: hello.apps.comcast-1.na-1.rht-labs.com
+  host: hello1.apps.comcast-1.na-1.rht-labs.com
   port:
     targetPort: http
   tls:
@@ -56,7 +56,7 @@ spec:
 status:
   ingress:
   - conditions:
-    host: hello.apps.comcast-1.na-1.rht-labs.com
+    host: hello1.apps.comcast-1.na-1.rht-labs.com
     routerCanonicalHostname: apps.comcast-1.na-1.rht-labs.com
     routerName: default
     wildcardPolicy: None
