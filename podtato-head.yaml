@@ -36,5 +36,19 @@ spec:
     port: 9000
     protocol: TCP
     targetPort: 9000
-    
+---
+kind: Route
+apiVersion: route.openshift.io/v1
+metadata:
+  name: helloservice
+spec:
+  host: helloservice.$domainname
+  to:
+    kind: Service
+    name: helloservice
+    weight: 100
+  port:
+    targetPort: http
+  wildcardPolicy: None
+
 
